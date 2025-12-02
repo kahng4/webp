@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>산업동물학</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.6rem;
+  z-index: 10;
+}
+main {
+  display: flex;
+  margin-top: 80px;
+  flex-grow:2;
+}
+
+#sidebar {
+  width: 200px;
+  background: #ecf0f1;
+  padding-top: 20px;
+  box-sizing: border-box;
+  height: calc(100vh - 80px);
+  position: fixed;
+  left: 0;
+  top: 80px;
+}
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+#sidebar li {
+  padding: 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #bdc3c7;
+}
+#sidebar li:hover {
+  background: #dfe6e9;
+}
+#topics {
+  margin-left: 220px;
+  padding: 20px;
+  flex-grow: 1;
+}
+.topicBox {
+  display: none;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #f1f2f6;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+#quizSection {
+  margin-left: 20px;
+  padding-top: px;
+}
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+#examCounter {
+  padding:px;
+}
+  </style>
+</head>
+<body>
+  <header>산업동물학 </header>
+
+  <main id="content">
+
+    <aside id="sidebar">
+      <ul>
+        <li onclick="toggleContent('topic1Content')">1. 번식우 사양관리</li>
+        <li onclick="toggleContent('topic2Content')">2. 송아지 사양관리</li>
+        <li onclick="toggleContent('topic3Content')">3. 핵심 포인트 요약</li>
+      </ul>
+    </aside>
+
+    <div id="topics">
+      <div id="topic1Content" class="topicBox">1. 번식우 사양관리
+
+번식우의 건강과 생산성 유지는 사료 관리, 환경, 건강관리, 번식 관리가 핵심입니다.
+사료 관리: 번식우는 임신 단계에 따라 영양 요구가 달라집니다. 초기 임신기에는 체중 유지와 최소한의 성장, 중기에는 근육과 체력 유지, 후기에는 태아 성장과 출산 준비를 위해 에너지와 단백질 공급이 중요합니다. 사료는 건초, 농후사료, 미네랄 보충제, 소금 등을 균형 있게 급여하며, 물은 충분히 제공해야 합니다. 체조건 점수(BCS)를 정기적으로 확인하여 과체중이나 저체중을 예방합니다.
+환경 관리: 깨끗하고 건조한 사육 공간, 충분한 환기, 적정 온습도 유지가 필수입니다. 출산 전후에는 별도의 구분사육을 통해 스트레스를 줄이고 질병 전파를 방지합니다.
+건강 관리: 정기적인 구충, 백신 접종, 질병 모니터링을 통해 건강을 유지합니다. 특히 번식 관련 질병(브루셀라증, BVD 등) 예방이 중요합니다.
+번식 관리: 발정 관찰, 인공수정 혹은 자연교배 시기 정확히 파악하고, 임신 진단 후 적절한 관리를 시행해야 합니다. 출산 전후 영양과 스트레스 관리로 모체 회복과 송아지 생존율을 높입니다.</div>
+      <div id="topic2Content" class="topicBox">송아지는 생후 초기 성장과 면역력 형성이 중요합니다.
+초유 급여: 출생 후 2시간 이내에 체중 4~6%에 해당하는 초유를 급여해야 합니다. 초유는 면역글로불린이 풍부하여 질병 예방과 초기 성장에 필수입니다. 초유는 체온 38~40℃로 맞추어 급여합니다.
+우유·대체유: 초유 이후 2~3주 동안은 우유 또는 우유대체제를 급여하며, 점차 이유식과 건초, 배합사료로 전환합니다. 급여량과 횟수는 성장 속도와 체중 증가에 맞춰 조절합니다.
+물과 사료: 깨끗한 물과 초기 이유용 사료를 항상 제공하여 장 발달과 섭취 습관을 길러줍니다.
+환경: 송아지는 온도, 습도, 청결 관리가 매우 중요합니다. 습하고 더러운 환경에서는 설사병과 호흡기 질병 위험이 높습니다. 충분한 환기와 건조한 침구, 개별 혹은 소그룹 사육이 권장됩니다.
+건강 관리: 생후 1~2개월 내에 기초 백신과 구충을 실시하고, 설사, 기침, 관절염 등 질병 발생 시 즉시 대응합니다. 정기 체중 측정과 성장 모니터링으로 사양 관리를 조정합니다.</div>
+      <div id="topic3Content" class="topicBox">3. 핵심 포인트 요약
+번식우와 송아지 사양관리는 영양, 환경, 건강, 관리 네 가지 요소가 서로 유기적으로 연결되어야 효과적입니다. 번식우는 임신 단계별로 적절한 에너지와 단백질을 공급하여 출산과 모유 생산 능력을 최적화하고, 체조건과 질병 관리를 통해 번식 효율을 높여야 합니다. 송아지는 출생 직후 초유 섭취로 면역력을 확보하고, 점진적으로 우유·대체유에서 고형사료로 전환하여 소화기관과 면역 발달을 촉진해야 합니다. 모든 과정에서 깨끗한 물과 위생적 환경을 제공하며, 질병 예방과 성장 모니터링을 꾸준히 시행하는 것이 생존율과 장기 생산성 향상에 핵심입니다.</div>
+    </div>
+
+    <section id="quizSection">
+      <h3>퀴즈</h3>
+    <input type="text" id="quizAnswerInput" placeholder="난소낭종 치료제는?" />
+    <button onclick="showAnswer()">정답 보기</button>
+    <button onclick="hideAnswer()">정답 숨기기</button>
+    <p id="quizResult"></p>
+    </section>
+
+     <section id="examCounter">
+      <h3>시험 날짜 계산</h3>
+      <input type="date" id="examDate" />
+      <button onclick="calcExam()">남은 시간 계산</button>
+      <p id="examResult"></p>
+    </section>
+  </main>
+
+  <script>
+    function toggleContent(id) {
+      const el = document.getElementById(id);
+      if (el.style.display === 'block') {
+        el.style.display = 'none';
+      } else {
+        document.querySelectorAll('.topicBox').forEach(box => box.style.display = 'none');
+        el.style.display = 'block';
+      }
+    }
+
+    const quizAnswer = 'LH호르몬'; 
+
+    function showAnswer() {
+    document.getElementById('quizResult').textContent = '정답: ' + quizAnswer;}
+    function hideAnswer() {
+    document.getElementById('quizResult').textContent = '';
+    }
+
+    function calcExam() {
+      const dateInput = document.getElementById('examDate').value;
+      if (!dateInput) {
+        document.getElementById('examResult').textContent = '날짜를 입력하십시오.';
+        return;
+      }
+      const examDate = new Date(dateInput);
+      const now = new Date();
+      const diff = examDate - now;
+      if (diff <= 0) {
+        document.getElementById('examResult').textContent = '이미 지난 날짜입니다.';
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      document.getElementById('examResult').textContent = `남은 시간: ${days}일 ${hours}시간`;
+    }
+  </script>
+</body>
+</html>
